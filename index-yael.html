@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>
+            API exercise QUIZ
+        </h1>
+    </header>
+    <div class="container mt-5">
+        <div class="form-group">
+            <label for="questions-number">Number of questions</label>
+            <select onchange="getQuestions()" class="form-control" id="questions-number">
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="category-type">Choose a category</label>
+            <select onchange="getQuestions()" class="form-control" id="category-type"></select>
+        </div>
+        <div class="form-group">
+            <label for="difficulty">Difficulty</label>
+            <select onchange="getQuestions()" class="form-control" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+        </div>
+    <div class="form-group">
+        <label for="type">Tipo</label>
+        <select onchange="getQuestions()" class="form-control" id="type">
+        <option value="multiple">Multiple choice</option>
+        <option value="boolean">True/false</option>
+        </select>
+    </div>
+</div> 
+        <form onsubmit="check()">
+            <div id="container-cards" class="backg"></div>
+            <button type="submit"  id="btnWorked" class="btn btn-success" style="display: none;">Confirm</button>
+            <div id="alert">
+            </div>
+        </form>
+    </div>
+</section>
+    <script src="./api-yael.js"></script>
+</body>
+</html>
